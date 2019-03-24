@@ -1,0 +1,159 @@
+:root{
+    --primary: #242424;
+    --light: #f7f7f7;
+    --red: #D32A2A;
+    --grey0: #ccc;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+/*iconmoon stuff*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ekjjv5');
+    src:  url('../fonts/icomoon.eot?ekjjv5#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ekjjv5') format('truetype'),
+      url('../fonts/icomoon.woff?ekjjv5') format('woff'),
+      url('../fonts/icomoon.svg?ekjjv5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-animation:before {
+    content: "\e900";
+  }
+  .icon-character:before {
+    content: "\e901";
+  }
+  .icon-map:before {
+    content: "\e902";
+  }
+  .icon-script:before {
+    content: "\e903";
+  }
+  .icon-sound:before {
+    content: "\e904";
+  }
+  .icon-star-0:before {
+    content: "\e905";
+  }
+  .icon-star-1:before {
+    content: "\e906";
+  }
+  .icon-weapon:before {
+    content: "\e907";
+  }
+/* end iconmoon */
+body{
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif; 
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+html{
+  height: 100%;
+}
+
+/* Underline From Center */
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: var(--light);
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+
+.navbar{
+    background-color: var(--primary);
+}
+
+.nav-item{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar{
+    max-width: 60px;
+    background: var(--primary);
+}
+.sidebar>div>a{
+    padding: .5em;
+    text-decoration: none;
+}
+
+.nav-icon{
+    font-size: 35px;
+    color:var(--grey0);
+}
+
+.nav-icon:hover{
+  color:var(--red);
+}
+
+.nav-icon-selected{
+  color:var(--light);
+}
+
+.horizontal-divider{
+  width:5px;
+  display: inline-block;
+  height: 30px;
+  margin-right:.5em;
+  background-image: url("../assets/bg-pattern.png");
+}
+
+.grey-text{
+  color: var(--grey0);
+}
+
+.section-header-container{
+  width: 95%;
+  margin: 0 auto;
+  border-bottom: 3px solid var(--grey0);
+}
+
+.filter-container>a{
+  color: var(--grey0);
+}
+
+.filter-container>a.selected{
+  color: var(--light);
+}
